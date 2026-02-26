@@ -40,6 +40,8 @@ model Car {
   userId Int?
 
   slots CarSlot[]
+
+  parkingRecords ParkingRecord[]
 }
 
 model CarSlot {
@@ -52,4 +54,19 @@ model CarSlot {
 
   car   Car? @relation(fields: [carId], references: [id])
   carId Int?
+
+  parkingRecords ParkingRecord[]
+}
+
+model ParkingRecord {
+  id        Int      @id @default(autoincrement())
+  entryTime DateTime @default(now())
+  exitTime  DateTime?
+  price     Decimal?
+
+  carId     Int
+  car       Car @relation(fields: [carId], references: [id])
+
+  slotId    Int
+  slot      CarSlot @relation(fields: [slotId], references: [id])
 }
