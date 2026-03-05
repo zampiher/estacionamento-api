@@ -7,8 +7,8 @@ import { PrismaService } from 'src/prisma.service';
 @Injectable()
 export class CarSlotsService {
   constructor(private prismaService: PrismaService) {}
-  create(createCarSlotDto: CreateCarSlotDto) {
-    const carSlot = this.prismaService.carSlot.create({
+  async create(createCarSlotDto: CreateCarSlotDto) {
+    const carSlot = await this.prismaService.carSlot.create({
       data: {
         price : createCarSlotDto.price,
       },
@@ -16,8 +16,8 @@ export class CarSlotsService {
     return carSlot;
   }
 
-  findAll() {
-    const carSlots = this.prismaService.carSlot.findMany({
+  async findAll() {
+    const carSlots = await this.prismaService.carSlot.findMany({
       where: {
         deletedAt: null,
       },
@@ -25,21 +25,21 @@ export class CarSlotsService {
     return carSlots;
   }
 
-  findOne(id: number) {
-    const carSlot = this.prismaService.carSlot.findUnique({ where: { id } });
+  async findOne(id: number) {
+    const carSlot = await this.prismaService.carSlot.findUnique({ where: { id } });
     return carSlot;
   }
 
-  update(id: number, updateCarSlotDto: UpdateCarSlotDto) {
-    const carSlot = this.prismaService.carSlot.update({
+  async update(id: number, updateCarSlotDto: UpdateCarSlotDto) {
+    const carSlot = await this.prismaService.carSlot.update({
       where: { id },
       data: { ...updateCarSlotDto },
     });
     return carSlot;
   }
 
-  remove(id: number) {
-    const carSlot = this.prismaService.carSlot.update({
+  async remove(id: number) {
+    const carSlot = await this.prismaService.carSlot.update({
       where: { id },
       data: { deletedAt: new Date() },
     });
