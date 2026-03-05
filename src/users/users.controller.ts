@@ -19,6 +19,14 @@ export class UsersController {
     return this.usersService.create(createUserDto);
   }
 
+  @Post('associate/car')
+  associateCarToUser(
+    @Body('userId') userId: number,
+    @Body('carId') carId: number,
+  ) {
+    return this.usersService.associateCarToUser(userId, carId);
+  }
+
   @Get()
   findAll() {
     return this.usersService.findAll();

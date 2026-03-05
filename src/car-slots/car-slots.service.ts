@@ -1,4 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import {
+  Injectable,
+  NotFoundException,
+  BadRequestException,
+} from '@nestjs/common';
 import { CreateCarSlotDto } from './dto/create-car-slot.dto';
 import { UpdateCarSlotDto } from './dto/update-car-slot.dto';
 import { PrismaService } from 'src/prisma.service';
@@ -45,5 +49,30 @@ export class CarSlotsService {
       data: { deletedAt: new Date() },
     });
     return carSlot;
+  }
+
+  async associateCarToCarSlot(carId: number, carSlotId: number) {
+    const carSlot = await this.prismaService.carSlot.findUnique({
+      where: { id: carSlotId },
+    });
+
+    if (!carSlot) {
+      throw new NotFoundException('Vaga de carro não encontrada');
+    }
+
+    if (carSlot.carId) {
+      throw new BadRequestException('A vaga já está em uso');
+    }
+
+    const updatedCarSlot = await this.prismaService.carSlot.update({
+      where: { id: carSlotId },
+      data: {
+        car: {
+          connect: { id: carId },
+        },
+      },
+    });
+
+    return updatedCarSlot;
   }
 }
