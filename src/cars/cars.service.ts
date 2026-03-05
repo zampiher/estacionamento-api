@@ -15,8 +15,7 @@ export class CarsService {
         model: model,
         plate: plate,
         year: year,
-        
-      }
+      },
     });
   }
 
@@ -26,7 +25,7 @@ export class CarsService {
 
   async findOne(id: number) {
     return await this.prisma.car.findUnique({
-      where: { id }
+      where: { id },
     });
   }
 
@@ -38,13 +37,13 @@ export class CarsService {
         brand: brand,
         model: model,
         plate: plate,
-      }
+      },
     });
   }
 
   async remove(id: number) {
     return await this.prisma.car.delete({
-      where: { id }
+      where: { id },
     });
   }
 }

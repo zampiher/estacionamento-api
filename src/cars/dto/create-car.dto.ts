@@ -1,6 +1,6 @@
 export class CreateCarDto {
-    plate: string;
-    brand: string;
-    model: string;
-    year: number;
+  plate: string;
+  brand: string;
+  model: string;
+  year: number;
 }

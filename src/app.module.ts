@@ -5,7 +5,12 @@ import { CarSlotsModule } from './car-slots/car-slots.module';
 import { CarsModule } from './cars/cars.module';
 
 @Module({
-  imports: [ConfigModule.forRoot({ isGlobal: true }), UsersModule, CarSlotsModule, CarsModule],
+  imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
+    UsersModule,
+    CarSlotsModule,
+    CarsModule,
+  ],
   controllers: [],
   providers: [],
   exports: [],

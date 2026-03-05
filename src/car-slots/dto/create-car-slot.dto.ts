@@ -1,3 +1,3 @@
 export class CreateCarSlotDto {
-    price: number;
+  price: number;
 }

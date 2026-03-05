@@ -3,14 +3,13 @@ import { CreateCarSlotDto } from './dto/create-car-slot.dto';
 import { UpdateCarSlotDto } from './dto/update-car-slot.dto';
 import { PrismaService } from 'src/prisma.service';
 
-
 @Injectable()
 export class CarSlotsService {
   constructor(private prismaService: PrismaService) {}
   async create(createCarSlotDto: CreateCarSlotDto) {
     const carSlot = await this.prismaService.carSlot.create({
       data: {
-        price : createCarSlotDto.price,
+        price: createCarSlotDto.price,
       },
     });
     return carSlot;
@@ -26,7 +25,9 @@ export class CarSlotsService {
   }
 
   async findOne(id: number) {
-    const carSlot = await this.prismaService.carSlot.findUnique({ where: { id } });
+    const carSlot = await this.prismaService.carSlot.findUnique({
+      where: { id },
+    });
     return carSlot;
   }
 
