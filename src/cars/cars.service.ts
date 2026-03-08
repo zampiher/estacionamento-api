@@ -8,11 +8,12 @@ export class CarsService {
   constructor(private prisma: PrismaService) {}
 
   async create(createCarDto: CreateCarDto) {
-    const { brand, model, plate, year } = createCarDto;
+    const { brand, model, color, plate, year } = createCarDto;
     return await this.prisma.car.create({
       data: {
         brand: brand,
         model: model,
+        color: color,
         plate: plate,
         year: year,
       },
@@ -36,12 +37,13 @@ export class CarsService {
   }
 
   async update(id: number, updateCarDto: UpdateCarDto) {
-    const { brand, model, plate } = updateCarDto;
+    const { brand, model, color, plate } = updateCarDto;
     return await this.prisma.car.update({
       where: { id },
       data: {
         brand: brand,
         model: model,
+        color: color,
         plate: plate,
       },
     });

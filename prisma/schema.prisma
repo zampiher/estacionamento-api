@@ -28,10 +28,11 @@ model User {
 
 model Car {
   id    Int    @id @default(autoincrement())
-  brand String
-  model String
+  brand String?
+  model String?
+  color String?
   plate String @unique
-  year  Int
+  year  Int?
 
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
