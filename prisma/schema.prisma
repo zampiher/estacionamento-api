@@ -1,74 +1,58 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-datasource db {
-  provider = "postgresql"
-}
-
 generator client {
   provider     = "prisma-client"
   output       = "../src/generated/prisma"
   moduleFormat = "cjs"
 }
 
+datasource db {
+  provider = "postgresql"
+}
+
 model User {
-  id        Int     @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   firstName String
   lastName  String
-  cpf       String? @unique
-
+  cpf       String?   @unique
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
   deletedAt DateTime?
-
-  cars Car[]
+  cars      Car[]
 }
 
 model Car {
-  id    Int    @id @default(autoincrement())
-  brand String?
-  model String?
-  color String?
-  plate String @unique
-  year  Int?
-
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  deletedAt DateTime?
-
-  user   User? @relation(fields: [userId], references: [id])
-  userId Int?
-
-  slots CarSlot[]
-
+  id             Int             @id @default(autoincrement())
+  brand          String?
+  model          String?
+  plate          String          @unique
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  deletedAt      DateTime?
+  userId         Int?
+  year           Int?
+  color          String?
+  user           User?           @relation(fields: [userId], references: [id])
+  slots          CarSlot[]
   parkingRecords ParkingRecord[]
 }
 
 model CarSlot {
-  id    Int     @id @default(autoincrement())
-  price Decimal
-
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  deletedAt DateTime?
-
-  car   Car? @relation(fields: [carId], references: [id])
-  carId Int?
-
+  id             Int             @id @default(autoincrement())
+  price          Decimal
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  deletedAt      DateTime?
+  carId          Int?
+  car            Car?            @relation(fields: [carId], references: [id])
   parkingRecords ParkingRecord[]
 }
 
 model ParkingRecord {
-  id        Int      @id @default(autoincrement())
-  entryTime DateTime @default(now())
+  id        Int       @id @default(autoincrement())
+  entryTime DateTime  @default(now())
   exitTime  DateTime?
   price     Decimal?
-
   carId     Int
-  car       Car @relation(fields: [carId], references: [id])
-
   slotId    Int
-  slot      CarSlot @relation(fields: [slotId], references: [id])
+  car       Car       @relation(fields: [carId], references: [id])
+  slot      CarSlot   @relation(fields: [slotId], references: [id])
 }
