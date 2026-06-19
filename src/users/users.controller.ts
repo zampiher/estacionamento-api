@@ -10,6 +10,7 @@ import {
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
+import { AssociateCarDto } from './dto/associate-car';
 
 @Controller('users')
 export class UsersController {
@@ -20,11 +21,11 @@ export class UsersController {
   }
 
   @Post('associate/car')
-  associateCarToUser(
-    @Body('userId') userId: number,
-    @Body('carId') carId: number,
-  ) {
-    return this.usersService.associateCarToUser(userId, carId);
+  associateCarToUser(@Body() associateCarDto: AssociateCarDto) {
+    return this.usersService.associateCarToUser(
+      associateCarDto.userId,
+      associateCarDto.carId,
+    );
   }
 
   @Get()
@@ -33,17 +34,17 @@ export class UsersController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: number) {
     return this.usersService.findOne(+id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
+  update(@Param('id') id: number, @Body() updateUserDto: UpdateUserDto) {
     return this.usersService.update(+id, updateUserDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: number) {
     return this.usersService.remove(+id);
   }
 }
