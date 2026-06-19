@@ -57,6 +57,8 @@ Start the application in watch mode (automatically restarts on file changes):
 
 ```bash
 npm run start:dev
+npx nx serve api       # Subir a API
+npx nx build
 ```
 
 ### Debug Mode
