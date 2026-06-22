@@ -1,0 +1,21 @@
+[2m> [22mvitest
+
+[1m[33mThe `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/configure-vite for details.[39m[22m
+[1m[33mThe `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/configure-vite for details.[39m[22m
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.9 [39m[90mC:/Users/Zz/projects_personal/estacionamento-api/apps/web[39m
+
+[90mstderr[2m | src/app/app.spec.tsx[2m > [22m[2mApp[2m > [22m[2mshould render successfully
+[22m[39m⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+[90mstderr[2m | src/app/app.spec.tsx[2m > [22m[2mApp[2m > [22m[2mshould have a greeting as the title
+[22m[39mTo match all elements we had to reset the lastIndex of the RegExp because the global flag is enabled. We encourage to remove the global flag from the RegExp.
+
+ [32m✓[39m [30m[46m web [49m[39m src/app/app.spec.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 182[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+[2m   Start at [22m 14:54:16
+[2m   Duration [22m 3.26s[2m (transform 92ms, setup 0ms, import 525ms, tests 182ms, environment 2.24s)[22m
+

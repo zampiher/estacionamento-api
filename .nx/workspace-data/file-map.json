@@ -1,0 +1,200 @@
+{
+  "version": "6.0",
+  "nxVersion": "23.0.0",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".env.example",
+        "hash": "6936345885779836451"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "2334728266440548413"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "14145419060237914883"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "415161240227156682"
+      },
+      {
+        "file": "README.md",
+        "hash": "8042319458414495664"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "9095688160439724650"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "17520456152920331010"
+      },
+      {
+        "file": "nest-cli.json",
+        "hash": "18272654682417215031"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "7882230421956051900"
+      },
+      {
+        "file": "package.json",
+        "hash": "4963953390070835762"
+      },
+      {
+        "file": "prisma.config.ts",
+        "hash": "5275218015518303467"
+      },
+      {
+        "file": "prisma/migrations/20251222200924_initial/migration.sql",
+        "hash": "7016232734891305110"
+      },
+      {
+        "file": "prisma/migrations/20260224230644_add_parking_records/migration.sql",
+        "hash": "11388571984845998843"
+      },
+      {
+        "file": "prisma/migrations/20260305022225_year/migration.sql",
+        "hash": "2006948117649783962"
+      },
+      {
+        "file": "prisma/migrations/20260308044008_add_color_to_car/migration.sql",
+        "hash": "17091039437973813167"
+      },
+      {
+        "file": "prisma/migrations/migration_lock.toml",
+        "hash": "2102472203520572126"
+      },
+      {
+        "file": "prisma/schema.prisma",
+        "hash": "14015424389327139780"
+      },
+      {
+        "file": "src/app.module.ts",
+        "hash": "15233438052365226675"
+      },
+      {
+        "file": "src/car-slots/car-slots.controller.spec.ts",
+        "hash": "18363280082353457662"
+      },
+      {
+        "file": "src/car-slots/car-slots.controller.ts",
+        "hash": "8582877962068073992"
+      },
+      {
+        "file": "src/car-slots/car-slots.module.ts",
+        "hash": "17911129106619363672"
+      },
+      {
+        "file": "src/car-slots/car-slots.service.spec.ts",
+        "hash": "12910193841701343148"
+      },
+      {
+        "file": "src/car-slots/car-slots.service.ts",
+        "hash": "9075193612897809878"
+      },
+      {
+        "file": "src/car-slots/dto/create-car-slot.dto.ts",
+        "hash": "9693558540137285388"
+      },
+      {
+        "file": "src/car-slots/dto/update-car-slot.dto.ts",
+        "hash": "17723596956507198220"
+      },
+      {
+        "file": "src/car-slots/entities/car-slot.entity.ts",
+        "hash": "16850934112525758420"
+      },
+      {
+        "file": "src/cars/cars.controller.spec.ts",
+        "hash": "4087000880833487974"
+      },
+      {
+        "file": "src/cars/cars.controller.ts",
+        "hash": "10656645274392392665"
+      },
+      {
+        "file": "src/cars/cars.module.ts",
+        "hash": "8682423569814444154"
+      },
+      {
+        "file": "src/cars/cars.service.spec.ts",
+        "hash": "10862232639332805809"
+      },
+      {
+        "file": "src/cars/cars.service.ts",
+        "hash": "7821941232620125883"
+      },
+      {
+        "file": "src/cars/dto/create-car.dto.ts",
+        "hash": "5479976585253906643"
+      },
+      {
+        "file": "src/cars/dto/update-car.dto.ts",
+        "hash": "4000440910444920806"
+      },
+      {
+        "file": "src/cars/entities/car.entity.ts",
+        "hash": "9763202741875704233"
+      },
+      {
+        "file": "src/main.ts",
+        "hash": "3571863589542586034"
+      },
+      {
+        "file": "src/prisma.service.ts",
+        "hash": "10908268104605478855"
+      },
+      {
+        "file": "src/users/dto/associate-car.dto.ts",
+        "hash": "17780192200342502847"
+      },
+      {
+        "file": "src/users/dto/associate-car.ts",
+        "hash": "17780192200342502847"
+      },
+      {
+        "file": "src/users/dto/create-user.dto.ts",
+        "hash": "18186938190581071509"
+      },
+      {
+        "file": "src/users/dto/update-user.dto.ts",
+        "hash": "14157191661826439892"
+      },
+      {
+        "file": "src/users/users.controller.spec.ts",
+        "hash": "17329556141515361412"
+      },
+      {
+        "file": "src/users/users.controller.ts",
+        "hash": "1661535297546745782"
+      },
+      {
+        "file": "src/users/users.module.ts",
+        "hash": "6676685273854369912"
+      },
+      {
+        "file": "src/users/users.service.spec.ts",
+        "hash": "4186494779337667450"
+      },
+      {
+        "file": "src/users/users.service.ts",
+        "hash": "9461120498197987972"
+      },
+      {
+        "file": "tsconfig.build.json",
+        "hash": "9666801268768259513"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "4713859489925822506"
+      }
+    ],
+    "projectFileMap": {}
+  },
+  "externalNodesHash": "17373061293781085548"
+}

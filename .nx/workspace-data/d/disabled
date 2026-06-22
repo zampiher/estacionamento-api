@@ -1,0 +1,26 @@
+Error: write EPIPE
+
+Messages from the log:
+[1m[33mTime taken for 'plugin worker 13108 code loading' 1574.7606ms[39m[22m
+[isolated-plugin] connected to worker for "C:\Users\Zz\projects_personal\estacionamento-api\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 13108)
+[plugin-worker] "C:\Users\Zz\projects_personal\estacionamento-api\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 13108) connected
+[NX v23.0.0 Daemon Server] - 2026-06-22T02:42:04.921Z - Time taken for 'start-plugin-worker:C:\Users\Zz\projects_personal\estacionamento-api\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json' 1751.8054ms
+[plugin-worker] "@nx/eslint/plugin" (pid: 23828) listening on \\.\pipe\nx\C:\Users\Zz\AppData\Local\Temp\plugin4612-3-1929.8671.sock
+[1m[33mTime taken for 'plugin worker 23828 code loading' 1635.0248000000001ms[39m[22m
+[isolated-plugin] connected to worker for "@nx/eslint/plugin" (pid: 23828)
+[NX v23.0.0 Daemon Server] - 2026-06-22T02:42:04.979Z - Time taken for 'start-plugin-worker:@nx/eslint/plugin' 1799.7441ms
+[plugin-worker] "@nx/eslint/plugin" (pid: 23828) connected
+[plugin-worker] "C:\Users\Zz\projects_personal\estacionamento-api\node_modules\nx\dist\src\plugins\package-json" (pid: 20872) loaded successfully
+[NX v23.0.0 Daemon Server] - 2026-06-22T02:42:05.604Z - Time taken for 'Load Nx Plugin: C:\Users\Zz\projects_personal\estacionamento-api\node_modules\nx\dist\src\plugins\package-json' 2507.0604999999996ms
+[plugin-worker] "C:\Users\Zz\projects_personal\estacionamento-api\node_modules\nx\dist\src\plugins\js" (pid: 19308) loaded successfully
+[NX v23.0.0 Daemon Server] - 2026-06-22T02:42:05.735Z - Time taken for 'Load Nx Plugin: C:\Users\Zz\projects_personal\estacionamento-api\node_modules\nx\dist\src\plugins\js' 2639.5254999999997ms
+[plugin-worker] "C:\Users\Zz\projects_personal\estacionamento-api\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 13108) loaded successfully
+[NX v23.0.0 Daemon Server] - 2026-06-22T02:42:05.813Z - Time taken for 'loadDefaultNxPlugins' 2718.1095000000005ms
+[NX v23.0.0 Daemon Server] - 2026-06-22T02:42:05.813Z - Time taken for 'Load Nx Plugin: C:\Users\Zz\projects_personal\estacionamento-api\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json' 2714.7909000000004ms
+[NX v23.0.0 Daemon Client] - 2026-06-22T02:42:06.248Z - [Messenger] Sending message type: REQUEST_PROJECT_GRAPH
+[NX v23.0.0 Daemon Client] - 2026-06-22T02:42:06.250Z - [Messenger] Message sent
+[NX v23.0.0 Daemon Client] - 2026-06-22T02:42:06.259Z - [Messenger] Socket error: write EPIPE
+
+
+
+More information: c:\Users\Zz\projects_personal\estacionamento-api\.nx\workspace-data\d\daemon.log
