@@ -196,15 +196,3 @@ Regenerate the Prisma client:
 ```bash
 npx prisma generate
 ```
-### Nx Commands
-
-```bash
-npx nx serve api          # sobe o backend
-npx nx serve web          # sobe o frontend
-npx nx build api          # build de produção do back
-npx nx build web          # build de produção do front
-npx nx test api           # testes de um projeto
-npx nx graph              # ver o grafo de dependências
-npx nx affected -t test   # roda testes SÓ do que você mudou (o superpoder do NX)
-npx nx run-many -t build  # builda todos os projetos de uma
-```
