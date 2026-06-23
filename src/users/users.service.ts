@@ -16,6 +16,9 @@ export class UsersService {
       data: {
         firstName: createUserDto.firstName,
         lastName: createUserDto.lastName,
+        numero: createUserDto.numero,
+        endereco: createUserDto.endereco,
+        complemento: createUserDto.complemento,
         cpf: createUserDto.cpf,
       },
     });
