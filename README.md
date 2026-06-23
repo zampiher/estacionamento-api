@@ -46,7 +46,7 @@ npm install
 Create a `.env` file in the project root with the following variables:
 
 ```env
-DATABASE_URL="postgresql://postgres:prisma@localhost:5432/postgres"
+DATABASE_URL="postgresql://postgres:prisma@localhost:5433/postgres?schema=public"
 ```
 
 ## Running the Application
@@ -86,7 +86,7 @@ Start the PostgreSQL database:
 docker-compose up -d
 ```
 
-This will start PostgreSQL on `localhost:5432` with credentials:
+This will start PostgreSQL on `localhost:5433` with credentials:
 
 - Username: `postgres`
 - Password: `prisma`
@@ -113,7 +113,7 @@ npx prisma studio
 Once the application is running, access the interactive API documentation at:
 
 ```
-http://localhost:3000/api/docs
+http://localhost:3000/api
 ```
 
 This provides a Swagger UI interface where you can test all available endpoints.
