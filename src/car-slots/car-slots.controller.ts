@@ -10,6 +10,7 @@ import {
 import { CarSlotsService } from './car-slots.service';
 import { CreateCarSlotDto } from './dto/create-car-slot.dto';
 import { UpdateCarSlotDto } from './dto/update-car-slot.dto';
+import { AssociateCarToSlotDto } from './dto/associate-car-to-slot.dto';
 
 @Controller('car-slots')
 export class CarSlotsController {
@@ -28,6 +29,17 @@ export class CarSlotsController {
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.carSlotsService.findOne(+id);
+  }
+
+  @Post(':id/associate-car')
+  associateCarToCarSlot(
+    @Param('id') id: string,
+    @Body() associateCarToSlotDto: AssociateCarToSlotDto,
+  ) {
+    return this.carSlotsService.associateCarToCarSlot(
+      associateCarToSlotDto.carId,
+      +id,
+    );
   }
 
   @Patch(':id')
